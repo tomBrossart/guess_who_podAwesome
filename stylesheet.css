@@ -3,3 +3,7 @@ img {
   height: 150px;
   width: 150px;
 }
+
+img:hover {
+  opacity: 0.75;
+}
