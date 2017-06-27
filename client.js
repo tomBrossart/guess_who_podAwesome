@@ -6,7 +6,6 @@ $(document).ready(function() {
   appendDOM();
   newGame();
   correctPerson();
-
 });
 
 // append our 4 photos onto DOM
@@ -33,7 +32,13 @@ function correctPerson() {
   $('.container').on('click', 'img', function() {
     var currentGuy = $('#current-name').text();      // how do we correctly select the current guy? this
     if($(this).data('name') === currentGuy) {
-     alert("Great Job!");
+      $(this).addClass('.winner');
+      $('.win').append('<div id="winner"></div>');
+      $(this).animate({height: "+=300", width: "+=300"}).delay(1200).animate({height: "150", width: "150"});
+
+    //  alert("Great Job!");
+      setTimeout(resetGame, 2000);
+
     //  confirm("Play again! Click 'Play Again'");    //this was our basic version of prompt the player to play again
    }
     else {
@@ -41,6 +46,13 @@ function correctPerson() {
     }
     console.log(currentGuy);
   });
+}
+
+function resetGame() {
+    //  $('c').remove();
+     $('#new-game').click();
+     $(this).removeClass('.winner');
+     $('.win div').remove();
 }
 
 // random number generator

@@ -1,3 +1,15 @@
+body {
+  margin: 10px auto;
+  width: 75%;
+  background-color: skyBlue;
+}
+
+button {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 img {
   float: left;
   height: 150px;
@@ -6,4 +18,12 @@ img {
 
 img:hover {
   opacity: 0.75;
+  transform: scale(1.2);
+}
+
+#winner {
+  background-image: url('https://www.3grow.net/assets/pictures/winner1.png');
+  height: 900px;
+  z-index: 100;
+  clear: both;
 }
