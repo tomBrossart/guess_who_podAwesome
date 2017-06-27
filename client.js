@@ -22,7 +22,7 @@ function newGame() {
   $('#new-game').on('click', function(){
     var ranNum = randomNumber(0, 3);
     var newGuy = nameArray[ranNum];
-    $('span').text(' ' + newGuy);
+    $('span').text(newGuy);
     console.log(newGuy);
     console.log(ranNum);
   });
@@ -31,14 +31,15 @@ function newGame() {
 // click listener to determine if correct img chosen
 function correctPerson() {
   $('.container').on('click', 'img', function() {
-    var currentGuy = $('#current-name').val();      // how do we correctly select the current guy? this
+    var currentGuy = $('#current-name').text();      // how do we correctly select the current guy? this
     if($(this).data('name') === currentGuy) {
      alert("Great Job!");
-     alert("Play again!)");
+    //  confirm("Play again! Click 'Play Again'");    //this was our basic version of prompt the player to play again
    }
     else {
       alert("Try again");
     }
+    console.log(currentGuy);
   });
 }
 
