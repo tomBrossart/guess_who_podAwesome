@@ -1,7 +1,6 @@
 console.log('linked up');
 var nameArray = ['Tom', 'David', 'Brendin', 'Ben'];
 
-
 $(document).ready(function() {
   appendDOM();
   newGame();
@@ -35,10 +34,8 @@ function correctPerson() {
       $(this).addClass('.winner');
       $('.win').append('<div id="winner"></div>');
       $(this).animate({height: "+=300", width: "+=300"}).delay(1200).animate({height: "150", width: "150"});
-
     //  alert("Great Job!");
       setTimeout(resetGame, 2000);
-
     //  confirm("Play again! Click 'Play Again'");    //this was our basic version of prompt the player to play again
    }
     else {
